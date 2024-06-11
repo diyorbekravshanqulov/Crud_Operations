@@ -1,29 +1,49 @@
 <template>
-  <div class="bg-gray-300 h-screen flex justify-center items-center">
-    <div class="bg-white w-[500px] p-10 rounded">
-      <h1 class="text-center text-3xl mb-5">Login</h1>
+  <div class="bg-gradient h-screen flex justify-center items-center">
+    <div class="bg-white w-[500px] py-[42px] px-[30px] rounded-[20px]">
+      <h1
+        class="text-center font-bold mx-14 text-[32px]"
+        style="border-left: 6px solid #FEAF00;"
+      >
+        CRUD OPERATIONS
+      </h1>
 
-      <form @submit.prevent="loginUser" class="flex flex-col gap-5">
-        <label for="">
-          Username
+      <h6 class="font-semibold text-[22px] text-center mt-8">Sign in</h6>
+      <p class="text-[#6C6C6C] text-center">
+        Enter your credentials to access your account
+      </p>
+
+      <form @submit.prevent="loginUser" class="flex flex-col gap-5 mt-8">
+        <label for="" class="text-[#6C6C6C]">
+          Email
           <input
             v-model="userData.username"
-            class="w-full py-3 px-5 border rounded outline-none focus:border-primary"
+            class="w-full px-[15px] py-3 border rounded border-[#E5E5E5] outline-none focus:border-[#FEAF00] placeholder:text-[#CDCDCD] placeholder:text-[12px]"
             type="text"
+            placeholder="Enter your email"
           />
         </label>
-        <label for="">
+        <label for="" class="text-[#6C6C6C]">
           Password
           <input
             v-model="userData.password"
-            class="w-full py-3 px-5 border rounded outline-none focus:border-primary"
+            class="w-full px-[15px] py-3 border rounded border-[#E5E5E5] outline-none focus:border-[#FEAF00] placeholder:text-[#CDCDCD] placeholder:text-[12px]"
             type="text"
+            placeholder="Enter your password"
           />
         </label>
 
-        <button class="py-3 px-5 text-xl bg-primary rounded text-white">
+        <button
+          class="w-full px-[15px] py-3 text-center rounded-[4px]  hover:bg-[#ffcb5a] text-xl bg-[#FEAF00] text-white"
+        >
           Login
         </button>
+        <div class="flex justify-center items-center">
+          <p class="text-[#aaa] mt-[27px]">
+            Forgot your password?
+            <a href="#" class="font-semibold text-[#FEAF00]">Reset Password</a>
+          </p>
+        </div>
       </form>
     </div>
   </div>

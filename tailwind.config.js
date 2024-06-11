@@ -7,7 +7,7 @@ export default {
       padding: "20px",
     },
     extend: {
-      backgroundColor: {
+      backgroundImage: {
         gradient: "linear-gradient(71.17deg, #FEAF00 19.35%, #F8D442 90.12%)",
       },
     },

@@ -1,9 +1,10 @@
-
 <script setup>
-
+// import Sidebar from "../components/Sidebar.js";
+import Sidebar from '../components/Sidebar.vue'
 </script>
 <template>
-    <div>
-        <h1 class="text-red-500">hello</h1>
-    </div>
+  <div>
+    <Sidebar />
+    <!-- <Sidebar /> -->
+  </div>
 </template>
