@@ -72,6 +72,7 @@ const loginUser = () => {
     })
     .catch((err) => {
       console.log("err", err);
+      alert("some")
     });
 };
 </script>

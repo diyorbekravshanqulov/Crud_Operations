@@ -9,6 +9,19 @@ const items = ref([
   "Report",
   "Settings",
 ]);
+
+import { useRouter } from "vue-router";
+const user = ref(null);
+const router = useRouter();
+
+user.value = JSON.parse(localStorage.getItem("user"));
+
+console.log("user", user);
+
+const logout = () => {
+  localStorage.removeItem("user");
+  router.push("/login");
+};
 </script>
 <template>
   <div
@@ -26,11 +39,13 @@ const items = ref([
         v-for="(item, index) in items"
         :key="index"
         href="#"
-        class="pl-[10px] w-[193px] p-3 hover:bg-[#FEAF00] rounded-md text-center"
+        class="pl-[10px] w-[193px] p-3 hover:bg-[#FEAF00] rounded-md text-center duration-300"
         >{{ item }}</a
       >
     </div>
 
-    <p class="text-center">Logout</p>
+    <button @click="logout" class="text-center hover:text-[#999] duration-300">
+      Logout
+    </button>
   </div>
 </template>
