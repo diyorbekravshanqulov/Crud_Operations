@@ -37,7 +37,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
-  const isLoggedin = true;
+  const isLoggedin = JSON.parse(localStorage.getItem("user"));
 
   if (!isLoggedin && to.name != "login") {
     return { name: "login" };
